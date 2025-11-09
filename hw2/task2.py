@@ -4,8 +4,14 @@ subjects = {
     'chemistry': {'David': 82, 'George': 80, 'Salome': 91}
 }
 
-#Output: {'George': {'math': 85, 'physics': 90, 'chemistry': 80}, ...}
-
 students = {}
-subjects_grades = {}
+
+for subject_name, grades in subjects.items():
+    for student_name, grade in grades.items():
+        if student_name not in students:
+            students[student_name] = {}
+        students[student_name][subject_name] = grade
+
+
+print(students)
 
