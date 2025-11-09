@@ -11,3 +11,4 @@ while True:
             fibonacci_list.append(next_num)
 
         print(fibonacci_list[:usernum])
+        break
